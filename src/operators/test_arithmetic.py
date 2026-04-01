@@ -43,3 +43,4 @@ def test_arithmetic_operators():
     assert 9 // 3 == 3
     assert isinstance(5 // 3, int)
 "# added manual test" 
+"# added manual test" 
