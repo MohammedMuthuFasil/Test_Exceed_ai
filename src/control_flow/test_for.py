@@ -132,3 +132,4 @@ def test_range_function():
     assert list(range(5, 10)) == [5, 6, 7, 8, 9]
     assert list(range(0, 10, 3)) == [0, 3, 6, 9]
     assert list(range(-10, -100, -30)) == [-10, -40, -70]
+"# fix edge case manually" 
