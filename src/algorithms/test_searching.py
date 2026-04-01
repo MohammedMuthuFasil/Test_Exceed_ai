@@ -9,12 +9,7 @@ import pytest
 
 
 def linear_search(arr, target):
-    """Search for a target value using linear search.
 
-    Iterates through each element until the target is found.
-    Returns the index if found, -1 otherwise.
-    Time complexity: O(n).
-    """
     for index, value in enumerate(arr):
         if value == target:
             return index
@@ -22,12 +17,7 @@ def linear_search(arr, target):
 
 
 def binary_search(arr, target):
-    """Search for a target value in a sorted list using binary search.
-
-    Repeatedly divides the search interval in half.
-    Returns the index if found, -1 otherwise.
-    Time complexity: O(log n). Requires sorted input.
-    """
+   
     low, high = 0, len(arr) - 1
     while low <= high:
         mid = (low + high) // 2
@@ -59,12 +49,7 @@ def binary_search_recursive(arr, target, low=0, high=None):
 
 
 def jump_search(arr, target):
-    """Search for a target value in a sorted list using jump search.
-
-    Jumps ahead by fixed steps to find the block containing the target,
-    then performs a linear search within that block.
-    Time complexity: O(√n). Requires sorted input.
-    """
+   
     n = len(arr)
     if n == 0:
         return -1
