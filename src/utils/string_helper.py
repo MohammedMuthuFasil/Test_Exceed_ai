@@ -20,16 +20,15 @@ def count_letter_in_list(data):
 
 def count_more_letter_in_list(data):
     count = {}
-    more_letter = {}
-    arr =set()
+    duplicates = []
     for i in data:
-        if i in count and count[i] >= 1:
-            more_letter[i] += 1
-            arr.add(i)
+        if i in count:
+            count[i] += 1
+            if count[i] == 2:
+                duplicates.append(i)
         else:
             count[i] = 1
-            more_letter[i] = 1
-    return more_letter,list(arr)
+    return count, duplicates
 
 from collections import Counter
 
