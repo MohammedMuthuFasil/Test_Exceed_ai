@@ -36,7 +36,10 @@ def test_function_documentation_string():
     # if they occur all their leading whitespace should be stripped. Equivalence of whitespace
     # should be tested after expansion of tabs (to 8 spaces, normally).
 
-    assert do_nothing.__doc__ == """Do nothing, but document it.
+    # NOTE: Python 3.13+ (PEP 740) strips leading whitespace from docstrings.
+    # Use inspect.cleandoc for cross-version compatible comparison.
+    import inspect
+    expected = """Do nothing, but document it.
 
-    No, really, it doesn't do anything.
-    """
+No, really, it doesn't do anything."""
+    assert inspect.cleandoc(do_nothing.__doc__) == expected
