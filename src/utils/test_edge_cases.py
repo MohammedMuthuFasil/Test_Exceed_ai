@@ -5,11 +5,7 @@ type mismatches, and unexpected inputs using pytest.mark.parametrize and
 class-based test organization.
 """
 
-import sys
-import os
 import pytest
-
-sys.path.insert(0, os.path.dirname(__file__))
 from calculator import add, subtract, multiply, divide
 from temperature import celsius_to_fahrenheit, fahrenheit_to_celsius, celsius_to_kelvin
 from string_helper import reverse_string, count_vowels, count_letter_in_list

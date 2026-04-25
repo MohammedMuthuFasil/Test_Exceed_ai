@@ -4,10 +4,6 @@ Covers reverse_string, count_vowels, count_letter_in_list,
 count_more_letter_in_list, and count_lettes functions.
 """
 
-import sys
-import os
-
-sys.path.insert(0, os.path.dirname(__file__))
 from string_helper import (
     reverse_string,
     count_vowels,

@@ -1,7 +1,3 @@
-import sys
-import os
-
-sys.path.insert(0, os.path.dirname(__file__))
 from validator import is_email, is_phone, is_positive, is_non_empty_string
 
 
