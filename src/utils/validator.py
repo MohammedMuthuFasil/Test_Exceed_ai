@@ -1,5 +1,8 @@
+import re
+
 def is_email(s):
-    return '@' in s and '.' in s
+    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    return bool(re.match(pattern, s))
 
 def is_phone(s):
     digits = ''.join(c for c in s if c.isdigit())
@@ -7,3 +10,6 @@ def is_phone(s):
 
 def is_positive(n):
     return isinstance(n, (int, float)) and n > 0
+
+def is_non_empty_string(s):
+    return isinstance(s, str) and len(s.strip()) > 0
